@@ -1,8 +1,13 @@
+import Header from "./components/Header/Header";
+import HomePage from "./pages/ProductListingPage/HomePage/HomePage";
+import Paths from "./routes/Paths";
+
 const App = () => {
-  return ( 
-    <h1>sdfsfsdf</h1>
-   );
+  return (
+    <>
+    <Paths />
+    </>
+  );
 }
  
 export default App;
-<h1>sdfsfsdf</h1>
