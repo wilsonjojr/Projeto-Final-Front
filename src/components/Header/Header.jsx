@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { InputText } from 'primereact/inputtext';
+
 
 const HeaderContainer = styled.header`
     background-color:gray;
@@ -19,7 +21,7 @@ const HeaderContainer = styled.header`
             color: #FFFFFF70;
             text-decoration: none;
             font-size: 16px;
-            &:hover, &:active{
+            &:hover, &.active{
                 color: #FFFFFF;
         }
     }
@@ -33,14 +35,14 @@ const Header = () => {
         <HeaderContainer>
         
             <h1>Logo</h1>
-        
+            <InputText keyfilter="int"  placeholder="Buscar produtos" />
             <nav>
                 <ul>
                     <li>
                         <NavLink to={"/"}>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/productViewPage"}>Produtos</NavLink>
+                        <NavLink to={"/productListingPage"}>Produtos</NavLink>
                     </li>
                     <li>
                         <NavLink to={"/categorias"}>Categorias</NavLink>
