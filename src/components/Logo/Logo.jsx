@@ -1,8 +1,12 @@
+import { NavLink } from "react-router-dom";
+import logoHeader from "../../assets/logo-header.svg"
 const Logo = () => {
     return (
-        <div className="logo">
-            <h2>My Store Logo</h2>
-        </div>
+        <>
+        <NavLink to={"/"}>
+            <img src={logoHeader} alt="Logo" style={{ width: "120px", height: "auto" }} />
+        </NavLink>
+        </>
       );
 }
  

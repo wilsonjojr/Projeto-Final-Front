@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { InputText } from 'primereact/inputtext';
+import Logo from "../Logo/Logo";
+import miniCartIcon from "../../assets/mini-cart.svg"
 
 
 const HeaderContainer = styled.header`
@@ -26,6 +28,14 @@ const HeaderContainer = styled.header`
         }
     }
     }
+
+    & input{
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background-color: white;
+        
+    }
 `;
 
 const Header = () => {
@@ -34,10 +44,28 @@ const Header = () => {
     return (
         <HeaderContainer>
         
-            <h1>Logo</h1>
-            <InputText keyfilter="int"  placeholder="Buscar produtos" />
+            <Logo />
+
+            <input type="text" placeholder="Pesquisar produto..." />
+
             <nav>
+
                 <ul>
+                    <li>
+                        <a>Cadastrar</a>
+                    </li>
+                    <li>
+                        <a>Entrar</a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src={miniCartIcon} alt="Mini Cart Icon" />
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    
+                
                     <li>
                         <NavLink to={"/"}>Home</NavLink>
                     </li>
