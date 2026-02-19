@@ -1,5 +1,7 @@
+import Galery from '../../components/Galery/Galery';
 import ProductListing from '../../components/ProductListing/ProductListing';
 import Section from '../../components/Section/Section';
+
 
 const HomePage = () => {
     // Exemplo de lista de produtos para o seu ProductListing. Você pode substituir isso por dados reais ou mockados conforme necessário. Cada produto tem um nome, imagem, preço e opcionalmente um preço com desconto. Essa estrutura de dados é compatível com as props esperadas pelo componente ProductCard, que é utilizado dentro do ProductListing para exibir cada produto de forma organizada.
@@ -12,10 +14,19 @@ const HomePage = () => {
          image: "/public/product-image-3.jpg", price: "200.00" },
     ];
 
+    // Exemplo de lista de fotos para a galeria. Cada foto tem uma fonte (src) e um texto alternativo (alt). Essa estrutura de dados é compatível com as props esperadas pelo componente Galery, que renderiza cada foto em um layout flexível. Você pode substituir essas fotos por imagens reais ou mockadas conforme necessário.
+    const photosGalery = [
+        { src: "produc-image-2.jpeg", alt: "Imagem 1" },
+        { src: "produc-image-3.jpeg", alt: "Imagem 2" },
+        { src: "product-image-1.jpeg", alt: "Imagem 3" },
+    ];
+
     return ( 
         <div className="home-page">
             <h1>Home Page Component</h1>
 
+            {/* Renderizando a galeria de fotos usando o componente Galery. O array photosGalery é passado como props para o componente, que por sua vez renderiza cada foto em um layout flexível definido pelo GaleryContainer. Cada foto é exibida com seu respectivo texto alternativo, garantindo acessibilidade e uma apresentação visual organizada. Essa seção da página inicial serve para destacar imagens relevantes, como promoções ou produtos em destaque, atraindo a atenção dos visitantes. */}
+            <Galery galery={photosGalery} />
             {/* Primeira Seção: Apenas título e link */}
             <Section 
                 title="Section Title" 
