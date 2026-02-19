@@ -1,23 +1,103 @@
+import { useState } from "react";
 import styled from "styled-components";
 
-const GaleryContainer= styled.div`
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
+const GaleryContainer = styled.div`
+  display: flex;
+  flex-direction: column; /* Organiza imagem principal e miniaturas em coluna */
+  gap: 20px;
+
+  .main-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .galery-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+  }
+`;
+
+const ThumbnailContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  & img {
+    width: 117px;
+    }
 `;
 
 const Galery = (props) => {
-    return ( 
+  const [indice, setIndice] = useState(0);
+
+  const proximaFoto = () => {
+    if (indice < props.galery.length - 1) {
+      setIndice(indice + 1);
+    }
+  };
+
+  const anteriorFoto = () => {
+    if (indice > 0) {
+      setIndice(indice - 1);
+    }
+  };
+
+  return (
+    <GaleryContainer>
+      {/* Seção Principal: Foto em destaque e botões de navegação [4, 5] */}
+      <div className="main-section">
+        {/* Botão "Anterior" com visibilidade controlada: Esconde o botão quando a primeira foto está ativa (índice 0) */}
+        <button onClick={anteriorFoto} style={{
+            visibility: indice===0 ? 'hidden' : 'visible'
+        }} >Anterior</button>
         
-        <GaleryContainer>
-            {/* O componente Galery recebe um array de fotos através das props e renderiza cada foto em um layout flexível. Cada foto é exibida dentro de um contêiner com a classe "galery-item", que pode ser estilizado para definir o tamanho e a aparência das imagens. O uso do map permite iterar sobre o array de fotos e criar um elemento para cada uma, garantindo que todas as fotos sejam exibidas de forma organizada e responsiva. O texto alternativo (alt) é utilizado para melhorar a acessibilidade, fornecendo uma descrição da imagem para leitores de tela e para casos em que a imagem não possa ser carregada. */}
-            {props.galery.map((photo, index) => (
-            <div key={index} className="galery-item">
-                <img src={photo.src} alt={photo.alt} />
-            </div>
-        ))}
-        </GaleryContainer>
-     );
-}
- 
-export default Galery
+        <div className="galery-item">
+          <img 
+            src={props.galery[indice].src} 
+            alt={props.galery[indice].alt} 
+          />
+        </div>
+
+        {/* Botão "Próxima" com visibilidade controlada: Esconde o botão quando a última foto está ativa (índice igual ao comprimento do array - 1) */}
+        <button onClick={proximaFoto} style={{
+            visibility: indice===props.galery.length - 1 ? 'hidden' : 'visible'
+        }}>Próxima</button>
+      </div>
+
+      {/* Renderização Condicional: Exibe miniaturas apenas se props.showThumbs existir. O props.showThumbs é uma prop booleana que controla a visibilidade das miniaturas.  */}
+      {props.showThumbs && (
+        <ThumbnailContainer>
+          {props.galery.map((photo, index) => (
+            <img
+              key={index} // Chave obrigatória para listas [6]
+              src={photo.src}
+              alt={`Miniatura ${index}`}
+              onClick={() => setIndice(index)} // Altera a imagem principal ao clicar [7, 8]
+              style={{
+                width: '117px',
+                height: '95px',
+                borderRadius: props.radius, // Aplica o arredondamento dinâmico via prop [1]
+                cursor: 'pointer',
+                objectFit: 'cover',
+                border: indice === index ? '2px solid #007bff' : 'none' // Destaque para a miniatura ativa
+              }}
+            />
+          ))}
+        </ThumbnailContainer>
+      )}
+    </GaleryContainer>
+  );
+};
+
+export default Galery;

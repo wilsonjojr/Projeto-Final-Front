@@ -6,7 +6,7 @@ const ProductCardContainer = styled.div`
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     margin: 10px;
 
