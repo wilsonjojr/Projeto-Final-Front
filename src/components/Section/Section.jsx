@@ -16,6 +16,7 @@ const Section = (props) => {
         <SectionContainer>
             <div>
             <h1>{props.title}</h1>
+            {}
             {props.link &&(
                  <a href={props.link.href}>{props.link.text}</a>
             )}
