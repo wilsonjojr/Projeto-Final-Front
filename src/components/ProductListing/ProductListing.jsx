@@ -2,9 +2,21 @@ import styled from "styled-components";
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductListingContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
+
 gap: 20px;
+justify-content: center;
+align-items: center;
+
+
+& ul {
+    list-style: none; 
+}
+
+& li {
+    margin: 10px; 
+  
+  }
+
 
 `;
 
@@ -19,14 +31,15 @@ const ProductListing = (props) => {
         criar um componente ProductCard para cada item da lista [2]
       */}
       {props.products.map((product, index) => (
-        <ProductCard
-          key={index} // O atributo 'key' é obrigatório para listas no React [4]
-          name={product.name}
-          image={product.image}
-          price={product.price}
+        <ul key={index}>
+         <li><ProductCard
+            name={product.name}
+            image={product.image}
+            price={product.price}
           priceDiscount={product.priceDiscount}
           description={product.description} // Usando a descrição do produto para o alt da imagem
-        />
+        /></li>
+        </ul>
       ))}
     </div>
     </ProductListingContainer>

@@ -34,11 +34,16 @@ const HomePage = () => {
     // Exemplo de lista de produtos para o seu ProductListing. Você pode substituir isso por dados reais ou mockados conforme necessário. Cada produto tem um nome, imagem, preço e opcionalmente um preço com desconto. Essa estrutura de dados é compatível com as props esperadas pelo componente ProductCard, que é utilizado dentro do ProductListing para exibir cada produto de forma organizada.
     const produtosDestaque = [
         { name: "Tênis Esportivo",
-         image: "/public/product-image-1.jpg", price: "150.00" },
+         image: "product-thumb-1.jpeg", price: "150.00" },
         { name: "Camiseta Social",
-         image: "/public/product-image-2.jpg", price: "80.00", priceDiscount: "60.00" },
+         image: "product-thumb-2.jpeg", price: "80.00", priceDiscount: "60.00" },
         { name: "Relógio de Pulso",
-         image: "/public/product-image-3.jpg", price: "200.00" },
+         image: "product-thumb-3.jpeg", price: "200.00" },
+         { name: "Tenis", image: "product-thumb-4.jpeg", price: "120.00" },
+         { name: "Tênis Esportivo", image: "product-thumb-5.jpeg", price: "150.00" },
+         { name: "Camiseta Social", image: "product-thumb-2.jpeg", price: "80.00", priceDiscount: "60.00" },
+         { name: "Relógio de Pulso", image: "product-thumb-5.jpeg", price: "200.00" },
+         { name: "Tenis", image: "product-thumb-1.jpeg", price: "120.00" },
     ];
 
     // Exemplo de lista de fotos para a galeria. Cada foto tem uma fonte (src) e um texto alternativo (alt). Essa estrutura de dados é compatível com as props esperadas pelo componente Galery, que renderiza cada foto em um layout flexível. Você pode substituir essas fotos por imagens reais ou mockadas conforme necessário.
@@ -62,15 +67,24 @@ const HomePage = () => {
 
             {/* Primeira Seção: Apenas título e link */}
             <Section 
-                title="Section Title" 
-                link={{ text: "Show More", href: "/productListingPage" }} 
-                fontSize="10px"
-            />
+                title="Coleção em destaque" 
+                titleAlign="center"
+                
+            >
+                <ul style={{listStyle:"none",display:"flex", flexDirection:"row",
+                alignItems:"center"
+                }}>
+                <li><img style={{ borderRadius: '4px'}} src="collection-1.png" alt="" /></li>
+                <li><img style={{ borderRadius: '4px'}} src="collection-2.png" alt="" /></li>
+                <li><img style={{ borderRadius: '4px'}} src="collection-3.png" alt="" /></li>
+                </ul>
+            </Section>
 
             {/* Terceira Seção: Usando ABERTURA e FECHAMENTO para o children */}
             <Section 
-                title="Third Section"
+                title="Produtos em alta"
                 link={{ text: "View Details", href: "/productViewPage/1/Tenis" }}
+                titleAlign="left"
             >
                 {/* 
                    Aqui entra o props.children! 

@@ -1,18 +1,35 @@
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const FiltroContaianer =styled.div`
+    
+    gap: 20px;
+    height: 308px;
+    width: 60px;
+    
+    label{
+        font-size: 16px;
+        font-weight: bold;
+        color:#474747;
+    }
+
+    select{
+        padding: 10px;
+        border-radius: 5px;
+        color:#474747}
+    `;
 
 const ProductListingPage = () => {
     return ( 
-
-        <>
-        <h1>Product Listing Page</h1>
-        <ul>
-            <li><Link to={"/productViewPage/1/Tenis"}>Tenis</Link></li>
-            <li><Link to={"/productViewPage/2/Camisa"}>Camisa</Link></li>
-            <li><Link to={"/productViewPage/3/Oculos"}>Oculos</Link></li>
-            <li><Link to={"/productViewPage/4/Calça"}>Calça</Link></li>
-            <li><Link to={"/productViewPage/5/Bermuda"}>Bermuda</Link></li>
-        </ul>
-        </>
+        <FiltroContaianer>
+            <label htmlFor="preco">Ordenar por:</label>
+            <select name="preco" id="preco">
+                <option value="menor">Menor Preço</option>
+                <option value="maior">Maior Preço</option>
+                
+            </select>
+            
+        </FiltroContaianer>
      );
 }
  
