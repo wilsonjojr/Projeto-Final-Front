@@ -67,7 +67,7 @@ const Galery = (props) => {
             src={props.galery[indice].src} 
             alt={props.galery[indice].alt} 
             // Aplica largura e altura dinâmicas via props. Essas props são definidas no array homeSlide do componente HomePage, onde cada objeto de foto inclui as propriedades largura e altura. O estilo inline é utilizado para garantir que cada imagem seja renderizada com as dimensões específicas fornecidas, permitindo uma apresentação visual consistente e adaptada às necessidades de cada foto na galeria.
-          style={{width: props.galery[indice].largura, height: props.galery[indice].altura}}/>
+          style={{width: props.galery[indice].largura, height: props.galery[indice].altura, borderRadius: props.galery[indice].radius}}/>
         </div>
 
         {/* Botão "Próxima" com visibilidade controlada: Esconde o botão quando a última foto está ativa (índice igual ao comprimento do array - 1) */}

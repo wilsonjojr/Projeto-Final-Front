@@ -1,4 +1,15 @@
 import { useParams } from "react-router-dom";
+import Galery from '../../components/Galery/Galery';
+import Section from "../../components/Section/Section";
+
+const homeSlide2=[
+        {src: "/public/home-slide-1.jpeg", alt: "Slide 1", largura:'700px', altura:'570px', radius:'4px'},
+        {src: "/public/home-slide-2.jpeg", alt: "Slide 2", largura:'700px', altura:'570px', radius:'4px'},
+        {src: "/public/home-slide-3.jpeg", alt: "Slide 3", largura:'700px', altura:'570px', radius:'4px'},
+        {src: "/public/home-slide-4.jpeg", alt: "Slide 4", largura:'700px', altura:'570px', radius:'4px'},
+        {src: "/public/home-slide-5.jpeg", alt: "Slide 5", largura:'700px', altura:'570px', radius:'4px'},
+        {src: "/public/home-slide-6.jpeg", alt: "Slide 6", largura:'700px', altura:'570px', radius:'4px'},
+    ]
 
 const ProductViewPage = () => {
 
@@ -6,9 +17,12 @@ const ProductViewPage = () => {
     
     const {id, nome} = useParams();
     return ( 
-        <div className="product-view-page">
+        <div>
             <h1>Product View Page Component #{id}{nome}</h1>
+        <Galery galery={homeSlide2} showThumbs={true}/>
+       
         </div>
+        
      );
 }
  

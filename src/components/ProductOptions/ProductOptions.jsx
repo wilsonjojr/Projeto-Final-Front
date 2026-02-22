@@ -1,7 +1,12 @@
-const ProductOptions = () => {
+const ProductOptions = (props) => {
+    
     return ( 
         <div className="product-options">
-            <h1>Product Options Component</h1>
+            <option value={props.options.map(option => option.name)}></option>
+           
+            <h1>{props.radius}</h1>
+            <h1>{props.shape}</h1>
+            
         </div>
      );
 }

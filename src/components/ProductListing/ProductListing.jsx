@@ -28,7 +28,7 @@ const ProductListing = (props) => {
     <div >
       {/* 
         Utilizamos props.products.map para percorrer o array e 
-        criar um componente ProductCard para cada item da lista [2]
+        criar um componente ProductCard para cada item da lista. Futuramente, podemos adicionar mais funcionalidades, como filtros ou ordenação, para melhorar a experiência do usuário ao navegar pelos produtos. Cada ProductCard é renderizado dentro de um elemento <li> para manter a estrutura semântica da lista, e o estilo do container garante que os cards sejam exibidos de forma organizada e visualmente atraente. Como cada produto só tem uma imagem, será necessário criar um array de imagens para cada produto, mesmo que contenha apenas uma imagem, para garantir a compatibilidade com o componente Galery, que espera um array de imagens para exibir a galeria de fotos do produto. Dessa forma, podemos garantir que o componente Galery funcione corretamente, mesmo quando um produto possui apenas uma imagem disponível.
       */}
       {props.products.map((product, index) => (
         <ul key={index}>
