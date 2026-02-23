@@ -44,6 +44,10 @@ const HomePage = () => {
          { name: "Camiseta Social", image: "product-thumb-2.jpeg", price: "80.00", priceDiscount: "60.00" },
          { name: "Relógio de Pulso", image: "product-thumb-5.jpeg", price: "200.00" },
          { name: "Tenis", image: "product-thumb-1.jpeg", price: "120.00" },
+         { name: "Tênis Esportivo", image: "product-thumb-3.jpeg", price: "150.00" },
+         { name: "Camiseta Social", image: "product-thumb-4.jpeg", price: "80.00", priceDiscount: "60.00" },
+         { name: "Relógio de Pulso", image: "product-thumb-2.jpeg", price: "200.00" },
+         { name: "Tenis", image: "product-thumb-3.jpeg", price: "120.00" },
     ];
 
     // Exemplo de lista de fotos para a galeria. Cada foto tem uma fonte (src) e um texto alternativo (alt). Essa estrutura de dados é compatível com as props esperadas pelo componente Galery, que renderiza cada foto em um layout flexível. Você pode substituir essas fotos por imagens reais ou mockadas conforme necessário.
