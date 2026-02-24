@@ -1,13 +1,27 @@
+import styled from "styled-components";
+
+const OptionsContainer = styled.div`
+display: flex;
+gap: 20px;
+
+& input[type="checkbox"] {
+    width: 20px;
+    border-radius: ${props => props.radius};
+}
+`;
+
 const ProductOptions = (props) => {
-    
+
     return ( 
-        <div className="product-options">
-            <option value={props.options.map(option => option.name)}></option>
-           
+        <OptionsContainer>
+            
+            {props.options.map(option => (
+                <input key={option.id} type="color" value={option.name} style={{borderRadius:{}}}></input>
+            ))}
             <h1>{props.radius}</h1>
             <h1>{props.shape}</h1>
             
-        </div>
+        </OptionsContainer>
      );
 }
  
