@@ -3,6 +3,9 @@ import Galery from '../../components/Galery/Galery';
 import Section from "../../components/Section/Section";
 import ProductOptions from "../../components/ProductOptions/ProductOptions";
 import BuyBox from "../../components/BuyBox/BuyBox";
+import ProductsPage from "../ProductListingPage/ProductListingPage";
+
+
 
 const homeSlide2=[
         {src: "/public/home-slide-1.jpeg", alt: "Slide 1", largura:'700px', altura:'570px', radius:'4px'},
@@ -33,10 +36,17 @@ const ProductViewPage = () => {
         <div>
             <h1>Product View Page Component #{id}{nome}</h1>
         <Galery galery={homeSlide2} showThumbs={true}/>
-        <ProductOptions options={optionsColors} radius={'4px'} shape={'square'}/>
+        
+        <BuyBox name={nome} reference={`REF-${id}`} stars={4} rating={4.5} avaliation={120} price={"120.00"} priceDiscount={"100,00"} description={"Lorem dsfkjns sklfjdsklfj sfklsdf sklk kk slsd lkdmsk mkldsmkm mklsmd mk smdk msklmdm klsd"}>
+            <ProductOptions options={optionsColors} radius={'4px'} shape={'square'}/>
+        </BuyBox>
+        
+        <Section title>
 
-        <BuyBox name={nome} reference={`REF-${id}`} stars={4} rating={4.5} avaliation={120}/>
+        </Section>
+        
         </div>
+        
         
      );
 }

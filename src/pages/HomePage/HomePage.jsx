@@ -4,9 +4,7 @@ import ProductListing from '../../components/ProductListing/ProductListing';
 import Section from '../../components/Section/Section';
 
 
-const HomePage = () => {
-
-    const HomeContainer=styled.div`
+const HomeContainer=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,8 +54,12 @@ const HomePage = () => {
         { src: "produc-image-5.jpeg", alt: "Imagem 5" }
     ];*/
 
+const HomePage = () => {
+
+    
+
     return ( 
-        <homeContainer>
+        <HomeContainer>
         <div className="home-page">
             <Galery galery={homeSlide} />
 
@@ -97,7 +99,7 @@ const HomePage = () => {
                 children={<ProductListing products={produtosDestaque} />}
             />
         </div>
-        </homeContainer>
+        </HomeContainer>
      );
 }
 

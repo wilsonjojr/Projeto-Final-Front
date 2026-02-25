@@ -17,6 +17,15 @@ const BuyBoxContainer = styled.div`
         font-size: 12px;
         color: #666666;
     }
+
+    & h4{
+        font-size: 14px;
+    }
+
+    &button{
+        font-size: 16px;
+        color: #F6AA1C;
+    }
     `;
 
 const BuyBox = (props) => {
@@ -24,6 +33,7 @@ const BuyBox = (props) => {
         <BuyBoxContainer>
             <h1>{props.name}</h1>
             <h2>{props.reference}</h2>
+             <h1>{props.preco}</h1>
             <div>
                 {/* 1. Criamos um array fixo de 5 posições */}
                 {Array.from({ length: 5 }, (_, i) => (
@@ -43,9 +53,28 @@ const BuyBox = (props) => {
                 ))}
                 {/* Exibindo os dados numéricos [5, 6] */}
                 <span>{props.rating}({props.avaliation} avaliações)</span>
-                
+                {props.priceDiscount ? (
+                <div>
+                    <h3 style={{ textDecoration: 'line-through' }}>R$ {props.price}</h3>
+                    <h3 style={{ color: 'red' }}>R$ {props.priceDiscount}</h3>
+                    
+                </div>
+            ) : (
+                <>
+                <h3>R$ {props.price}</h3>
+                </>
+            )}
+
+            <h4>{props.description}</h4>
+            <div>
+                {props.children}
             </div>
+
+            <button>Comprar</button>
+            </div>
+            
         </BuyBoxContainer>
+        
       );
 }
  

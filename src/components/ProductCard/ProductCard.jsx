@@ -40,10 +40,10 @@ const ProductCard = (props) => {
             <Link to={`/productViewPage/${props.id}/${props.name}`}>
             <img src={props.image} alt={props.description} />
             <h2>{props.name}</h2>
-            {props.priceDiscount ? (
+           {props.priceDiscount ? (
                 <div>
                     <h3 style={{ textDecoration: 'line-through' }}>R$ {props.price}</h3>
-                    <h3 style={{ color: 'red' }}>R$ {props.priceDiscount}</h3>
+                     <h3 style={{ color: 'red' }}>R$ {props.priceDiscount}</h3>
                     
                 </div>
             ) : (
