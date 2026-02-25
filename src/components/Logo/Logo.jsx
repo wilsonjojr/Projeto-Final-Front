@@ -1,10 +1,17 @@
 import { NavLink } from "react-router-dom";
 import logoHeader from "../../assets/logo-header.svg"
-const Logo = () => {
+import logoFooter from "../../assets/logo-footer.svg"
+const Logo = (props) => {
     return (
         <>
         <NavLink to={"/"}>
-            <img src={logoHeader} alt="Logo" style={{ width: "253px", height: "44px", display: "block" }} />
+            <img 
+                    /* Se props.logo for igual a "header", usa logoHeader. 
+                       Caso contrário (else), usa logoFooter */
+                    src={props.logo === "header" ? logoHeader : logoFooter} 
+                    alt="Logo" 
+                    style={{ width: "253px", height: "44px", display: "block" }} 
+                />
         </NavLink>
         </>
       );

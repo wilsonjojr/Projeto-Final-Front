@@ -44,7 +44,7 @@ const Header = () => {
     return (
         <HeaderContainer>
         
-            <Logo />
+            <Logo logo ="header"/>
 
             <input type="text" placeholder="Pesquisar produto..." />
 
