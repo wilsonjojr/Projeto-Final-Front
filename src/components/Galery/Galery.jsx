@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
+import SetaDireita from "../../assets/arrow-right.svg";
+import SetaEsquerda from "../../assets/arrow-left.svg";
 
 const GaleryContainer = styled.div`
   display: flex;
@@ -58,9 +60,9 @@ const Galery = (props) => {
       {/* Seção Principal: Foto em destaque e botões de navegação [4, 5] */}
       <div className="main-section">
         {/* Botão "Anterior" com visibilidade controlada: Esconde o botão quando a primeira foto está ativa (índice 0) */}
-        <button onClick={anteriorFoto} style={{
+        <img src={SetaEsquerda} onClick={anteriorFoto} style={{
             visibility: indice===0 ? 'hidden' : 'visible'
-        }} >Anterior</button>
+        }} />
         
         <div className="galery-item">
           <img 
@@ -71,9 +73,9 @@ const Galery = (props) => {
         </div>
 
         {/* Botão "Próxima" com visibilidade controlada: Esconde o botão quando a última foto está ativa (índice igual ao comprimento do array - 1) */}
-        <button onClick={proximaFoto} style={{
+        <img src={SetaDireita} onClick={proximaFoto} style={{
             visibility: indice===props.galery.length - 1 ? 'hidden' : 'visible'
-        }}>Próxima</button>
+        }}/>
       </div>
 
       {/* Renderização Condicional: Exibe miniaturas apenas se props.showThumbs existir. O props.showThumbs é uma prop booleana que controla a visibilidade das miniaturas.  */}
