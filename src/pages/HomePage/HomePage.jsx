@@ -84,7 +84,7 @@ const HomePage = () => {
             {/* Terceira Seção: Usando ABERTURA e FECHAMENTO para o children */}
             <Section 
                 title="Produtos em alta"
-                link={{ text: "View Details", href: "/productViewPage/1/Tenis" }}
+                link={{ text: "View Details", href: "/productListingPage" }}
                 titleAlign="left"
             >
                 {/* 

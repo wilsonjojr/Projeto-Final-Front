@@ -4,6 +4,7 @@ import Section from "../../components/Section/Section";
 import ProductOptions from "../../components/ProductOptions/ProductOptions";
 import BuyBox from "../../components/BuyBox/BuyBox";
 import ProductsPage from "../ProductListingPage/ProductListingPage";
+import ProductListing from "../../components/ProductListing/ProductListing";
 
 
 
@@ -25,7 +26,14 @@ const homeSlide2=[
         {id:6, name:'White', radius:'4px', shape:'square'},
     ]
 
-    
+    const produtosDestaque = [
+     { name: "Tênis Esportivo", image: "/public/product-thumb-1.jpeg", price: "150.00", images:["product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg"] },
+        { name: "Camiseta Social",
+         image: "/public/product-thumb-2.jpeg", price: "80.00", priceDiscount: "60.00", images:["product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg"] },
+        { name: "Relógio de Pulso",
+         image: "/public/product-thumb-3.jpeg", price: "200.00", images:["product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg"] },
+         { name: "Tenis", image: "/public/product-thumb-4.jpeg", price: "120.00", images:["product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg"] },
+         { name: "Tênis Esportivo", image: "/public/product-thumb-5.jpeg", price: "150.00", images:["product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg"] },]
 
 const ProductViewPage = () => {
 
@@ -41,7 +49,13 @@ const ProductViewPage = () => {
             <ProductOptions options={optionsColors} radius={'4px'} shape={'square'}/>
         </BuyBox>
         
-        <Section title>
+        <Section title="Coleção em destaque" 
+                titleAlign="left" link={{
+                     "text": "Ver todos",
+                    "href": "/productListingPage" 
+                }}>
+
+                    <ProductListing products={produtosDestaque}/>
 
         </Section>
         
