@@ -10,6 +10,7 @@ const HomeContainer=styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
+    background-color: #F9F8FE;
 
     .galery-item img {
       width: 20px;

@@ -33,7 +33,7 @@ const homeSlide2=[
         { name: "Relógio de Pulso",
          image: "/public/product-thumb-3.jpeg", price: "200.00", images:["product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg","product-thumb-3.jpeg"] },
          { name: "Tenis", image: "/public/product-thumb-4.jpeg", price: "120.00", images:["product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg","product-thumb-4.jpeg"] },
-         { name: "Tênis Esportivo", image: "/public/product-thumb-5.jpeg", price: "150.00", images:["product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg","product-thumb-5.jpeg"] },]
+        ]
 
 const ProductViewPage = () => {
 

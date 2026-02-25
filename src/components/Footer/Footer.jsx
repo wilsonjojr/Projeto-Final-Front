@@ -93,7 +93,7 @@ const contactInfos = [
 
 const Footer = () => {
 
-    const FooterContainer = styled.div`
+    const FooterContainer = styled.footer`
     background-color:#1F1F1F;
     display: flex;
     flex-direction: row;

@@ -7,15 +7,16 @@ const ProductCardContainer = styled.div`
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     margin: 10px;
+    width: 300px;
+    
 
-    & img {
-        width: 100%;    
+    & .image-product-card {
+        width: 292px;  
+        height: 321px;
     }
 
-    & h2 {
+    & .title-product-card {
         font-size: 18px;
         margin: 10px 0;
         text-decoration: none;
@@ -36,10 +37,10 @@ const ProductCard = (props) => {
         <ProductCardContainer>
             {/* O componente Link é usado para criar um link clicável que leva o usuário para a página de visualização do produto. O caminho do link é construído usando o ID e o nome do produto, permitindo que a página de visualização do produto acesse essas informações para exibir os detalhes corretos. */}
         
-        <div className="product-card">
+        
             <Link to={`/productViewPage/${props.id}/${props.name}`}>
-            <img src={props.image} alt={props.description} />
-            <h2>{props.name}</h2>
+            <img src={props.image} alt={props.description} className="image-product-card"/>
+            <h2 className="title-product-card" st>{props.name}</h2>
            {props.priceDiscount ? (
                 <div className="preco-produto">
                     <h3 style={{ textDecoration: 'line-through' }}>R$ {props.price}</h3>
@@ -52,7 +53,7 @@ const ProductCard = (props) => {
                 </>
             )}
             </Link>
-        </div>
+        
         
         </ProductCardContainer>
       );

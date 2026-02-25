@@ -2,18 +2,21 @@ import styled from "styled-components";
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductListingContainer = styled.div`
-
+display: flex;
 gap: 20px;
-justify-content: center;
-align-items: center;
+
 
 
 & ul {
-    list-style: none; 
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; 
+
 }
 
 & li {
     margin: 10px; 
+    width: 300px;
   
   }
 
@@ -30,17 +33,19 @@ const ProductListing = (props) => {
         Utilizamos props.products.map para percorrer o array e 
         criar um componente ProductCard para cada item da lista. Futuramente, podemos adicionar mais funcionalidades, como filtros ou ordenação, para melhorar a experiência do usuário ao navegar pelos produtos. Cada ProductCard é renderizado dentro de um elemento <li> para manter a estrutura semântica da lista, e o estilo do container garante que os cards sejam exibidos de forma organizada e visualmente atraente. Como cada produto só tem uma imagem, será necessário criar um array de imagens para cada produto, mesmo que contenha apenas uma imagem, para garantir a compatibilidade com o componente Galery, que espera um array de imagens para exibir a galeria de fotos do produto. Dessa forma, podemos garantir que o componente Galery funcione corretamente, mesmo quando um produto possui apenas uma imagem disponível.
       */}
+       <ul >
       {props.products.map((product, index) => (
-        <ul key={index}>
-         <li><ProductCard
+       
+         <li key={index}><ProductCard
             name={product.name}
             image={product.image}
             price={product.price}
           priceDiscount={product.priceDiscount}
           description={product.description} // Usando a descrição do produto para o alt da imagem
         /></li>
-        </ul>
+        
       ))}
+      </ul>
     </div>
     </ProductListingContainer>
   );
