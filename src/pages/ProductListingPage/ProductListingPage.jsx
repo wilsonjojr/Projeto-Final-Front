@@ -101,7 +101,9 @@ const ProductListingPage = () => {
 
         <ProductListing products={ProductsPage}/>
 
-        
+        <ul>
+                <li><Link to = {`/productViewPage/1/Teste`}>Teste</Link></li>
+            </ul>
         </Section>
         </>
      );

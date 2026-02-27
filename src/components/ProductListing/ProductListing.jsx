@@ -37,6 +37,7 @@ const ProductListing = (props) => {
       {props.products.map((product, index) => (
        
          <li key={index}><ProductCard
+            id = {index}
             name={product.name}
             image={product.image}
             price={product.price}

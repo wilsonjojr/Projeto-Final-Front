@@ -27,7 +27,8 @@ const homeSlide2=[
     ]
 
     const produtosDestaque = [
-     { name: "Tênis Esportivo", image: "/public/product-thumb-1.jpeg", price: "150.00", images:["product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg"] },
+     {
+         name: "Tênis Esportivo", image: "/public/product-thumb-1.jpeg", price: "150.00", images:["product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg","product-thumb-1.jpeg"] },
         { name: "Camiseta Social",
          image: "/public/product-thumb-2.jpeg", price: "80.00", priceDiscount: "60.00", images:["product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg","product-thumb-2.jpeg"] },
         { name: "Relógio de Pulso",

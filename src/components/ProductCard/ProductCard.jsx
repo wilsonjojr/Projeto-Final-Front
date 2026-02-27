@@ -32,7 +32,9 @@ const ProductCardContainer = styled.div`
     `;
 
 const ProductCard = (props) => {
-   // O componente ProductCard é um componente funcional que recebe as propriedades do produto, como imagem, descrição, nome, preço e preço com desconto. Ele utiliza essas propriedades para renderizar um cartão de produto com a imagem, nome e preço do produto. Se houver um preço com desconto, ele exibe o preço original riscado e o preço com desconto ao lado. Caso contrário, ele exibe apenas o preço original. O componente é estilizado usando uma classe CSS chamada "product-card".
+   // O componente ProductCard é um componente funcional que recebe as propriedades do produto, como imagem, descrição, nome, preço e preço com desconto. Ele utiliza essas propriedades para renderizar um cartão de produto com a imagem, nome e preço do produto. Se houver um preço com desconto, ele exibe o preço original riscado e o preço com desconto ao lado. Caso contrário, ele exibe apenas o preço original. O componente é estilizado usando uma classe CSS chamada "product-card".´
+
+   console.log(props);
     return (
         <ProductCardContainer>
             {/* O componente Link é usado para criar um link clicável que leva o usuário para a página de visualização do produto. O caminho do link é construído usando o ID e o nome do produto, permitindo que a página de visualização do produto acesse essas informações para exibir os detalhes corretos. */}
@@ -40,7 +42,7 @@ const ProductCard = (props) => {
         
             <Link to={`/productViewPage/${props.id}/${props.name}`}>
             <img src={props.image} alt={props.description} className="image-product-card"/>
-            <h2 className="title-product-card" st>{props.name}</h2>
+            <h2 className="title-product-card">{props.name}</h2>
            {props.priceDiscount ? (
                 <div className="preco-produto">
                     <h3 style={{ textDecoration: 'line-through' }}>R$ {props.price}</h3>

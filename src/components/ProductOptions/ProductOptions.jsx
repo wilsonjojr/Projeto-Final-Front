@@ -18,8 +18,7 @@ const ProductOptions = (props) => {
             {props.options.map(option => (
                 <input key={option.id} type="color" value={option.name} style={{borderRadius:{}}}></input>
             ))}
-            <h1>{props.radius}</h1>
-            <h1>{props.shape}</h1>
+            
             
         </OptionsContainer>
      );

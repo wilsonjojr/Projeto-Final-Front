@@ -99,6 +99,8 @@ const HomePage = () => {
                 link={{ text: "Show More", href: "/productListingPage" }}
                 children={<ProductListing products={produtosDestaque} />}
             />
+
+            
         </div>
         </HomeContainer>
      );
