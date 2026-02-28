@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import logoHeader from "../../assets/logo-header.svg"
 import logoFooter from "../../assets/logo-footer.svg"
+import styled from "styled-components";
+
+const LogoContainer = styled.div`
+`;
 const Logo = (props) => {
     return (
         <>
