@@ -4,6 +4,7 @@ import logoFooter from "../../assets/logo-footer.svg"
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
+background-color: none;
 `;
 const Logo = (props) => {
     return (
