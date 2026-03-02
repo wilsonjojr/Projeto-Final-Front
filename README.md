@@ -1,1 +1,1 @@
-vhjvjhkjh
+Projeto Front-End desenvolvido para o projeto final do curso de Dev. Fullstack da Geração Tech 3.0. O projeto se trata se um e-commerc que deve ter 3 paginas principais: Homepage, lista de produtos e pagina do produto.
