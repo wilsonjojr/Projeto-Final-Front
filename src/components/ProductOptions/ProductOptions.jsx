@@ -16,7 +16,7 @@ const ProductOptions = (props) => {
         <OptionsContainer>
             
             {props.options.map(option => (
-                <input key={option.id} type="color" value={option.name} style={{borderRadius:{}, backgroundColor:option.name, color: option.name}} readOnly></input>
+                <input key={option.id} type={option.color} value={option.name} style={{borderRadius:{}, backgroundColor:option.name, color: option.name}} readOnly></input>
             ))}
             
             
