@@ -4,5 +4,8 @@ export const products = [
         name: "",
         image:"",
         images: [],
+    },
+    {
+        id: 2
     }
 ]
